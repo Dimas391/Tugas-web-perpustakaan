@@ -2,39 +2,72 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Data Buku</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Data buku</title>
 </head>
-<link rel="stylesheet" type="text/css" href="style.css">
 <body>
-	<div class="databuku">
-		<h1>Form Data Buku</h1>
-		<form method="post" action="" name="frmdaftar" onsubmit="return databuku()">
-		Judul Buku <input type="text" name="JudulBuku" id="JudulBuku">
-		Penulis <input type="text" name="Penulis" id="Penulis">
-		Penerbit <input type="text" name="Penerbit" id="Penerbit">
-		<input type="submit" name="tblsimpan" value="save" class="databukusimpan">
-		<input type="reset" name="tblsimpan" value="reset" class="databukusimpan">
-	</form>
-	
+	<div class="kotakbuku">
+		<img width="50px" height="50px" src="img/Buku.png">
+		<img class="gambar" width="50px" height="50px" src="./img/Buku.png">
+		<div class="hal1">
+			<h2><marquee>Perpustakaan Politeknik Negeri Lhokseumawe</marquee></h2>
+			<p class="si">"MEMBACA ADALAH JENDELA DUNIA"</p>
+		</div>
+		<div class="kotak2">
+
+		<div class="databuku1">
+		<div class="data">
+			<h1>Data Buku</h1>
+			<form method="post" action="" name="frmdaftar" onsubmit="return databuku1()">
+			Id Buku <input type="text" name="txtid" id="IdBuku">
+			Judul Buku <input type="text" name="Judul Buku" id="JudulBuku">
+			Pengarang <input type="text" name="Pengarang" id="Pengarang">
+			Penerbit <input type="text" name="Penerbit" id="Penerbit">
+			<input type="submit" name="tblsimpan" value="save" class="save">
+			<input type="reset" name="tblreset" value="reset" class="reset">
+			</form> 	
+		</div>
+	</div>
+			<p>Hai Admin</p>
+		</div>
+		<div class="beranda">
+			<a href="index.html">Beranda</a>
+		</div>
+		<div class="data">
+			<p>Entry Data Dan Transaksi</p>
+			<a href="data_anggota.html">Data Anggota</a> <br>
+			<a href="data_buku.html">Data Buku</a> <br>
+			<a href="transaksi_pinjam.html">Transaksi Peminjaman</a>
+		</div>
+		<div class="laporan">
+			<p>Laporan</p>
+			<a href="#">Lap.Data Anggota</a> <br>
+			<a href="#">Lap.Data Buku</a>
+		</div>
+	</div>
 	<script type="text/javascript">
-	function databuku(){
+	function databuku1(){
 	//buat variabel untuk menampung inputan
-	JudulBuku= document.getElementById('JudulBuku');
-	Penulis = document.getElementById('Penulis');
+	IdBuku = document.getElementById('IdBuku');
+	JudulBuku = document.getElementById('JudulBuku');
+	Pengarang = document.getElementById('Pengarang ');
 	Penerbit = document.getElementById('Penerbit');
-	if(JudulBuku.value==''){
-		alert('Judul Buku tidak boleh kosong');
+	if(IdBuku.value==''){
+		alert('IDBuku tidak boleh kosong');
+		IdBuku.focus();
+		return false;
+	}else if(JudulBuku.value==''){
+		alert('Judul Buku Tidak Boleh kosong');
 		JudulBuku.focus();
 		return false;
-	}else if(Penulis.value==''){
-		alert('Penulis Tidak Boleh kosong');
-		Penulis.focus();
+	}else if(Pengarang.value==''){
+		alert('Pengarang Tidak Boleh kosong');
+		Pengarang.focus();
 		return false;
 	}else if(Penerbit.value==''){
 		alert('Penerbit Tidak Boleh kosong');
 		Penerbit.focus();
-		return false;
-}else{
+	}else{
 	alert('Terimah Kasih Telah Mengisi Form Data Buku');
 }
 

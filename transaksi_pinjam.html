@@ -2,83 +2,78 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Transaksi Peminjaman</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Data Peminjaman</title>
 </head>
 <body>
-		<div class="pinjam">
-		<table>
-			<form method="post" action="" name="frmdaftar" onsubmit="return datatransaksi()">
-			<h1>Input Transaksi Peminjaman</h1>
-			<tr>
-			<td>Judul buku</td>
-			<td>:</td>
-			<td><input type="text" name="Judul" id="Judulbuku"></td>
-			</tr>
-
-			<tr>
-			<td>Nama Mahasiswa</td>
-			<td>:</td>
-			<td><input type="text" name="nama" id="NamaMahasiswa"></td>
-			</tr>
-
-			<tr>
-			<td>Nim</td>
-			<td>:</td>
-			<td><input type="text" name="nim" id="Nim"></td>
-			</tr>
-
-			<tr>
-			<td>Tanggal Peminjaman</td>
-			<td>:</td>
-			<td><input type="date" name="tanggalpinjam" id="tanggalpinjam"></td>
-			</tr>
-
-			<tr>
-			<td>Tanggal Kembali</td>
-			<td>:</td>
-			<td><input type="date" name="tanggalkembali" id="tanggalkembali"></td>
-			</tr>
-
-			<tr>
-				<td><input type="submit" name="tblsimpan" value="save" class="savetransaksi"></td>
-				<td><input type="reset" name="tblsimpan" value="reset" class="savetransaksi"></td>
-	</form>
-			</tr>
+	<div class="kotakbuku3">
+		<img width="50px" height="50px" src="./img/Buku.png">
+		<img class="gambar" width="50px" height="50px" src="./img/Buku.png">
+		<div class="hal1">
+			<h2><marquee>Perpustakaan Politeknik Negeri Lhokseumawe</marquee></h2>
+			<p class="si">"MEMBACA ADALAH JENDELA DUNIA"</p>
 		</div>
+		<div class="kotak2">
+
+		<div class="datatransaksi1">
+		<div class="datatransaksi">
+			<h1>Data Transaksi</h1>
+			<form method="post" action="" name="frmdaftar" onsubmit="return databuku1()">
+			Id Buku <input type="text" name="txtid" id="IdBuku">
+			Judul Buku <input type="text" name="Judul Buku" id="JudulBuku">
+			Pengarang <input type="text" name="Pengarang" id="Pengarang">
+			Penerbit <input type="text" name="Penerbit" id="Penerbit">
+			Tanggal Pinjam <input type="date" name="tanggalPinjam">
+			Tanggal Kembali <input type="date" name="tanggalkembali">
+			<input type="submit" name="tblsimpan" value="save" class="save">
+			<input type="reset" name="tblreset" value="reset" class="reset">
+			</form> 	
+		</div>
+	</div>
+			<p>Hai Admin</p>
+		</div>
+		<div class="berandatransaksi">
+			<a href="index.html">Beranda</a>
+		</div>
+		<div class="transaksi_pinjam">
+			<p>Entry Data Dan Transaksi</p>
+			<a href="data_anggota.html">Data Anggota</a> <br>
+			<a href="data_buku.html">Data Buku</a> <br>
+			<a href="transaksi_pinjam.html">Transaksi Peminjaman</a>
+		</div>
+		<div class="laporantransaksi">
+			<p>Laporan</p>
+			<a href="#">Lap.Data Anggota</a> <br>
+			<a href="#">Lap.Data Buku</a>
+		</div>
+	</div>
 	<script type="text/javascript">
-	function datatransaksi(){
+	function databuku1(){
 	//buat variabel untuk menampung inputan
-	Judulbuku= document.getElementById('Judulbuku');
-	NamaMahasiswa = document.getElementById('NamaMahasiswa');
-	Nim = document.getElementById('Nim');
-	tanggalpinjam = document.getElementById('tanggalpinjam"');
-	tanggalkembal = document.getElementById('tanggalkembal"');
-	if(Judulbuku.value==''){
-		alert('Judul Buku tidak boleh kosong');
-		Judulbuku.focus();
+	IdBuku = document.getElementById('IdBuku');
+	JudulBuku = document.getElementById('JudulBuku');
+	Pengarang = document.getElementById('Pengarang ');
+	Penerbit = document.getElementById('Penerbit');
+	if(IdBuku.value==''){
+		alert('IDBuku tidak boleh kosong');
+		IdBuku.focus();
 		return false;
-	}else if(NamaMahasiswa.value==''){
-		alert('Nama Mahasiswa Tidak Boleh kosong');
-		NamaMahasiswas.focus();
+	}else if(JudulBuku.value==''){
+		alert('Judul Buku Tidak Boleh kosong');
+		JudulBuku.focus();
 		return false;
-	}else if(Nim.value==''){
-		alert('Nim Tidak Boleh kosong');
-		Nim.focus();
+	}else if(Pengarang.value==''){
+		alert('Pengarang Tidak Boleh kosong');
+		Pengarang.focus();
 		return false;
-	}else if(tanggalpinjam.value==''){
-		alert('tanggal peminjaman Tidak Boleh kosong');
-		tanggalpinjam.focus();
-		return false;
-	}else if(tanggalkembal.value==''){
-		alert('tanggal peminjaman Tidak Boleh kosong');
-		tanggalkembal.focus();
-		return false;
+	}else if(Penerbit.value==''){
+		alert('Penerbit Tidak Boleh kosong');
+		Penerbit.focus();
 	}else{
-		alert('Terimah Kasih Telah Mengisi Data Transaksi');
-	}
+	alert('Terimah Kasih Telah Mengisi Form Data Buku');
+}
 
 }
-	</script>
+</script>
 </body>
 </html>
